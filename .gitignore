@@ -24,3 +24,4 @@ nbdist/
 .nb-gradle/
 
 WebContent
+.vscode/settings.json
