@@ -1,7 +1,4 @@
 -------------Database Script for Leave Management System--------------------
-
-CREATE DATABASE lms;
-
 \c lms
 
 ---------------UserInfo table contains all users data-----------------

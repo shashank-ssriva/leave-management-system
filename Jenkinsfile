@@ -5,14 +5,14 @@ pipeline {
         TAG = "${env.BUILD_NUMBER}"
     }
     stages {
-        stage('Code check out') {
+        stage('Check out code') {
             steps {
                 git 'https://github.com/shashank-ssriva/leave-management-system.git'
             }
         }
         stage('SonarQube analysis') {
             steps {
-                sh "/Users/admin/Downloads/sonar-scanner-4.0.0.1744-macosx/bin/sonar-scanner"
+                sh "/Users/admin/Downloads/sonar-scanner-4.5.0.2216-macosx/bin/sonar-scanner"
             }
         }
         stage('Build WAR artifact') {

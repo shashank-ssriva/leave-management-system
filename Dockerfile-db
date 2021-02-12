@@ -1,0 +1,7 @@
+FROM postgres:13.1
+
+ENV POSTGRES_PASSWORD postgres 
+ENV POSTGRES_DB lms 
+COPY ./src/main/resources/app-DB-Script.sql /docker-entrypoint-initdb.d/
+
+EXPOSE 5432

@@ -1,0 +1,21 @@
+
+Gcom.lms.service.LeaveManageService#getAllActiveLeaves()Ljava/util/List;n
+d/Users/admin/Downloads/leave-management-system/src/main/java/com/lms/service/LeaveManageService.java. .(0"1*ê
+1n
+d/Users/admin/Downloads/leave-management-system/src/main/java/com/lms/service/LeaveManageService.java0 0(Ï
+È
+n
+d/Users/admin/Downloads/leave-management-system/src/main/java/com/lms/service/LeaveManageService.java0 0(.
+%0(com.lms.repository.LeaveManageRepository"__id*A*?$
+"com.lms.service.LeaveManageService"
+leaveManageRepository†ù
+n
+d/Users/admin/Downloads/leave-management-system/src/main/java/com/lms/service/LeaveManageService.java0 0(2
+%1java.util.List"Mcom.lms.repository.LeaveManageRepository#getAllActiveLeaves()Ljava/util/List;*0
+.
+%0(com.lms.repository.LeaveManageRepository2getAllActiveLeaves()"à
+n
+d/Users/admin/Downloads/leave-management-system/src/main/java/com/lms/service/LeaveManageService.java0 0(3
+
+%1java.util.ListB&$
+"com.lms.service.LeaveManageService
