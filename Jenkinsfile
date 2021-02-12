@@ -12,7 +12,7 @@ pipeline {
         }
         stage('SonarQube analysis') {
             steps {
-                sh "/Users/admin/Downloads/sonar-scanner-4.5.0.2216-macosx/bin/sonar-scanner -Dproject.settings=./sonar-scanner.properties"
+                sh "/Users/admin/Downloads/sonar-scanner-4.5.0.2216-macosx/bin/sonar-scanner"
             }
         }
         stage('Build WAR artifact') {
