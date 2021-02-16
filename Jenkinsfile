@@ -13,7 +13,7 @@ pipeline {
         }
         stage('SonarQube analysis') {
             steps {
-                echo ${SONARQUBE_KEY}
+                echo $SONARQUBE_KEY
                 sh "/usr/local/bin/envsubst < sonar-project.properties | /Users/admin/Downloads/sonar-scanner-4.5.0.2216-macosx/bin/sonar-scanner"
             }
         }
