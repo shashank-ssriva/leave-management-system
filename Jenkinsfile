@@ -2,7 +2,10 @@ pipeline {
     agent any
     environment {
         DOCKER_HOST = 'tcp://127.0.0.1:2375'
+        SCANNER_HOME = tool 'Sonar-scanner on Mac'
         SONARQUBE_KEY = credentials('SONARQUBE_KEY')
+        SONARQUBE_ORG = "shashank-ssriva-github"
+        PROJECT_NAME = "Leave Management System"
         TAG = "${env.BUILD_NUMBER}"
     }
     stages {
@@ -13,9 +16,12 @@ pipeline {
         }
         stage('SonarQube analysis') {
             steps {
-                
-                    sh '/usr/local/bin/mvn clean package sonar:sonar -Dsonar.host=https://sonarcloud.io -Dsonar.login=$SONARQUBE_KEY'
-                
+                withSonarQubeEnv('SonarQube on cloud') {
+                    sh '''$SCANNER_HOME/bin/sonar-scanner -Dsonar.organization=$SONARQUBE_ORG \
+        -Dsonar.java.binaries=src/main/java/ \
+        -Dsonar.projectKey=$PROJECT_NAME \
+        -Dsonar.sources=.'''
+                }
             }
         }
         stage('Build WAR artifact') {
