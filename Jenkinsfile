@@ -5,7 +5,7 @@ pipeline {
         SCANNER_HOME = tool 'Sonar-scanner on Mac'
         SONARQUBE_KEY = credentials('SONARQUBE_KEY')
         SONARQUBE_ORG = "shashank-ssriva-github"
-        PROJECT_NAME = "Leave Management System"
+        PROJECT_KEY = "leave-management-system"
         TAG = "${env.BUILD_NUMBER}"
     }
     stages {
@@ -19,7 +19,7 @@ pipeline {
                 withSonarQubeEnv('SonarQube on cloud') {
                     sh '''$SCANNER_HOME/bin/sonar-scanner -Dsonar.organization=$SONARQUBE_ORG \
         -Dsonar.java.binaries=src/main/java/ \
-        -Dsonar.projectKey=$PROJECT_NAME \
+        -Dsonar.projectKey=$PROJECT_KEY \
         -Dsonar.sources=.'''
                 }
             }
