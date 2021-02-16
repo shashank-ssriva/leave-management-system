@@ -13,9 +13,9 @@ pipeline {
         }
         stage('SonarQube analysis') {
             steps {
-                withSonarQubeEnv('SonarQube on cloud') {
+                
                     sh '/usr/local/bin/mvn clean package sonar:sonar -Dsonar.login=$SONARQUBE_KEY'
-                }
+                
             }
         }
         stage('Build WAR artifact') {
