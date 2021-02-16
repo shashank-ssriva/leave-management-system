@@ -1,38 +1,0 @@
-
-jcom.lms.repository.LeaveManageNativeSqlRepo#getAllLeavesOnStatus(Ljava/lang/StringBuffer;)Ljava/util/List;w
-m/Users/admin/Downloads/leave-management-system/src/main/java/com/lms/repository/LeaveManageNativeSqlRepo.java (2"startingBlock*°
-startingBlockw
-m/Users/admin/Downloads/leave-management-system/src/main/java/com/lms/repository/LeaveManageNativeSqlRepo.java2 (K÷
-”
-w
-m/Users/admin/Downloads/leave-management-system/src/main/java/com/lms/repository/LeaveManageNativeSqlRepo.java ("
-%1"
-__annotate*
-java.lang.SuppressWarnings*&
-$
-
-whereQueryjava.lang.StringBuffer∏
-µ
-w
-m/Users/admin/Downloads/leave-management-system/src/main/java/com/lms/repository/LeaveManageNativeSqlRepo.java@ (J$
-
-whereQueryjava.lang.StringBuffer"__annotation*
-
-%1*
-1*Ò
-1w
-m/Users/admin/Downloads/leave-management-system/src/main/java/com/lms/repository/LeaveManageNativeSqlRepo.java (Ó
-Î
-w
-m/Users/admin/Downloads/leave-management-system/src/main/java/com/lms/repository/LeaveManageNativeSqlRepo.java/ (`
-%0java.lang.String"__concat*&$
-"select * from leave_details where *&
-$
-
-whereQueryjava.lang.StringBuffer"Å
-w
-m/Users/admin/Downloads/leave-management-system/src/main/java/com/lms/repository/LeaveManageNativeSqlRepo.java (
-"":$
-
-whereQueryjava.lang.StringBufferB/-
-+com.lms.repository.LeaveManageNativeSqlRepo
