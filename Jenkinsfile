@@ -16,7 +16,7 @@ pipeline {
         }
         stage('SonarQube analysis') {
             steps {
-                withSonarQubeEnv(installationName: 'SonarQube on cloud', credentialsId : 'SonarQube Cloud Login') {
+                withSonarQubeEnv(installationName: 'SonarQube on cloud', credentialsId : 'sonar-cloud-login') {
                     sh '''$SCANNER_HOME/bin/sonar-scanner -Dsonar.organization=$SONARQUBE_ORG \
         -Dsonar.java.binaries=src/main/java/ \
         -Dsonar.projectKey=$PROJECT_KEY \
