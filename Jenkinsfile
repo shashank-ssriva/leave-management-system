@@ -14,7 +14,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps {
                 
-                    sh '/usr/local/bin/mvn clean package sonar:sonar -Dsonar.login=$SONARQUBE_KEY'
+                    sh '/usr/local/bin/mvn clean package sonar:sonar -Dsonar.host=https://sonarcloud.io -Dsonar.login=$SONARQUBE_KEY'
                 
             }
         }
