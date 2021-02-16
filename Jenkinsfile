@@ -14,7 +14,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps {
                 withSonarQubeEnv('SonarQube on cloud') {
-                    sh '/usr/local/bin/mvn org.sonarsource.scanner.maven:sonar-maven-plugin'
+                    sh '/usr/local/bin/mvn clean package sonar:sonar'
                 }
             }
         }
