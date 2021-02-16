@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKER_HOST = 'tcp://127.0.0.1:2375'
+        SONARQUBE_KEY = credentials('SONARQUBE_KEY')
         TAG = "${env.BUILD_NUMBER}"
     }
     stages {
