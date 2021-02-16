@@ -13,7 +13,8 @@ pipeline {
         }
         stage('SonarQube analysis') {
             steps {
-                sh "/Users/admin/Downloads/sonar-scanner-4.5.0.2216-macosx/bin/sonar-scanner"
+                echo env.SONARQUBE_KEY
+                sh "/usr/local/bin/envsubst < sonar-project.properties | /Users/admin/Downloads/sonar-scanner-4.5.0.2216-macosx/bin/sonar-scanner"
             }
         }
         stage('Build WAR artifact') {
